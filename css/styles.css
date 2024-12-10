@@ -1,0 +1,324 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Light gray */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #007bff; /* Primary blue */
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1rem;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f1f1f1; /* Light gray */
+    color: #6c757d; /* Bootstrap gray */
+    padding: 15px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Spinner Styling */
+.spinner {
+    width: 40px;
+    height: 40px;
+    animation: spin 3s linear infinite;
+    transform-origin: center;
+}
+.navbar-icon {
+    width: 40px; /* Adjust size */
+    height: 40px;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Type-Specific Colors */
+.type-normal { background-color: #A8A77A; color: white; }
+.type-fire { background-color: #EE8130; color: white; }
+.type-water { background-color: #6390F0; color: white; }
+.type-electric { background-color: #F7D02C; color: black; }
+.type-grass { background-color: #7AC74C; color: white; }
+.type-ice { background-color: #96D9D6; color: black; }
+.type-fighting { background-color: #C22E28; color: white; }
+.type-poison { background-color: #A33EA1; color: white; }
+.type-ground { background-color: #E2BF65; color: black; }
+.type-flying { background-color: #A98FF3; color: white; }
+.type-psychic { background-color: #F95587; color: white; }
+.type-bug { background-color: #A6B91A; color: white; }
+.type-rock { background-color: #B6A136; color: white; }
+.type-ghost { background-color: #735797; color: white; }
+.type-dragon { background-color: #6F35FC; color: white; }
+.type-dark { background-color: #705746; color: white; }
+.type-steel { background-color: #B7B7CE; color: black; }
+.type-fairy { background-color: #D685AD; color: black; }
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    border-radius: 10px 10px 0 0;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Team Sections */
+#yourTeam, #opponentTeam {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/* Battle Log */
+#battleLog {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#battleLog h4 {
+    margin-bottom: 10px;
+    color: #343a40;
+}
+
+.battle-log-winner {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#yourTeam .card, #opponentTeam .card {
+    width: 100px;
+    text-align: center;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #007bff; /* Primary blue */
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue */
+    border-color: #0056b3;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+/* Alerts */
+.alert {
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+#pokemonGrid {
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+#pokemonGrid::-webkit-scrollbar {
+    width: 10px;
+}
+
+#pokemonGrid::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 10px;
+}
+
+#pokemonGrid::-webkit-scrollbar-track {
+    background-color: #f8f9fa;
+}
+
+/* Health Bar */
+.health-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.health-bar-fill {
+    height: 100%;
+    background-color: #28a745;
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Card Effects */
+.pokemon-card {
+    transition: transform 0.2s, background-color 0.5s;
+}
+
+.pokemon-card.attacking {
+    background-color: rgba(40, 167, 69, 0.2); /* Green Glow */
+    transform: scale(1.1);
+}
+
+.pokemon-card.damaged {
+    background-color: rgba(220, 53, 69, 0.2); /* Red Glow */
+    animation: shake 0.5s;
+}
+
+.pokemon-card.fainted {
+    opacity: 0.5;
+    background-color: #6c757d; /* Gray */
+    transition: opacity 1s ease-in-out, background-color 0.5s ease-in-out;
+}
+.battle-log-info {
+    color: #343a40; /* Dark gray */
+}
+.battle-log-win {
+    color: #28a745; /* Green */
+    font-weight: bold;
+}
+.battle-log-faint {
+    color: #dc3545; /* Red */
+    font-weight: bold;
+}
+.type-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.type-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Shake Animation */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+}
+/* Center the news feed */
+#rssFeed {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Add space between cards */
+    justify-content: center; /* Center the cards horizontally */
+}
+
+/* News Card Styling */
+#rssFeed .card {
+    width: 300px; /* Fixed width for consistent card size */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s ease-in-out;
+}
+
+#rssFeed .card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+#rssFeed .card-title a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+#rssFeed .card-title a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+#rssFeed .card-text {
+    color: #6c757d; /* Bootstrap gray for the description */
+    font-size: 0.9rem; /* Slightly smaller text for descriptions */
+    line-height: 1.4;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
